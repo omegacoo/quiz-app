@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+.css-quiz-window {
+    background-image: url('/images/background.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 66vw;
+    height: 66vh;
+}
+
+.css-title {
+    text-align: center;
+}
+
+main {
+    text-align: center;
+}
+
+.css-start {
+    border-radius: 50%;
+    border: 2px solid;
+    box-shadow: 5px 5px gray;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    position: relative;
+    top: 20%;
+}
+
+.css-start img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+#css-click-note {
+    position: relative;
+    top: 125px;
+}
