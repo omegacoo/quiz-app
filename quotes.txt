@@ -3,3 +3,17 @@ Descartes: "I think, therefor I am."
 Hume: “The life of man is of no greater importance to the universe than that of an oyster.” 
 Kant: “The death of dogma is the birth of morality.” 
 Mill: “Bad men need nothing more to compass their ends, than that good men should look on and do nothing.” 
+
+random philosophers:
+Plato
+Aristotle
+Nietzsche
+Epictitus
+Saint Augustine
+Einstein
+Russel
+Hegel
+Voltaire
+Hobbes
+Locke
+Marcus Aurelius
