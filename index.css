@@ -30,6 +30,11 @@ main {
 }
 
 /* Landing page */
+.js-landing {
+    display: block;
+    margin-top: 35%;
+}
+
 .js-start {
     border-radius: 50%;
     border: 2px solid;
@@ -38,9 +43,6 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    
-    position: relative;
-    top: 20%;
 
     width: 150px;
     height: 150px;
@@ -48,18 +50,31 @@ main {
     background-color: white;
 }
 
-.js-start img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+/* Status tracker */
+.js-status-tracker {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+    border: 1px solid;
+    width: 70vw;
+
+    padding: 10px;
+
+    display: none;
 }
 
-#js-click-note {
-    position: relative;
-    top: 140px;
+.js-status-tracker p {
+    display: inline;
+    margin: 10px;
 }
 
 /* Questionare */
+.js-questionare {
+    display: none;
+}
+
 .js-quote-box {
     display: block;
     margin-left: auto;
@@ -87,4 +102,57 @@ main {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+}
+
+/* Individual results page */
+.js-individual-results {
+    display: none;
+}
+
+.js-philosopher-image-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    border: 1px solid;
+
+    width: 55vw;
+    height: 55vw;
+}
+
+.js-who-said-box {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border: 1px solid;
+    
+    width: 55vw;
+    height: 80px;
+}
+
+.js-continue {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+/* End results page */
+.js-end-results {
+    display: block;
+    margin-top: 125px;
+    
+    display: none;
+}
+
+.js-end-results p {
+    position: relative;
+    top: 50px;
+}
+
+.js-end-results button {
+    position: relative;
+    top: 80px;
 }
