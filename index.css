@@ -61,8 +61,6 @@ main {
     width: 70vw;
 
     padding: 10px;
-
-    display: none;
 }
 
 .js-status-tracker p {
@@ -71,9 +69,6 @@ main {
 }
 
 /* Questionare */
-.js-questionare {
-    display: none;
-}
 
 .js-quote-box {
     display: block;
@@ -105,9 +100,6 @@ main {
 }
 
 /* Individual results page */
-.js-individual-results {
-    display: none;
-}
 
 .js-philosopher-image-box {
     display: block;
@@ -143,8 +135,6 @@ main {
 .js-end-results {
     display: block;
     margin-top: 125px;
-    
-    display: none;
 }
 
 .js-end-results p {
@@ -152,7 +142,7 @@ main {
     top: 50px;
 }
 
-.js-end-results button {
+.js-end-results a {
     position: relative;
     top: 80px;
 }
