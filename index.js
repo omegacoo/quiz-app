@@ -87,7 +87,7 @@ function buildCurrentScreen(quote, philosophers){
             <div class="js-quote-box">
                 <h3 class="js-quote-title">Who said?</h3>
                 <p>
-                    ${quote}
+                    <i>${quote}</i>
                 </p>
             </div>
             <form class="js-quote-form" action="#">
@@ -128,7 +128,7 @@ function buildCurrentScreen(quote, philosophers){
 }
 
 function handleStart(){
-    $('.js-start').on('click', function(){
+    $('.js-quiz-window').on('click', '.js-start', function(){
         STATE.screen = 'questionare';
 
         renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
@@ -169,7 +169,7 @@ function handlePlayAgain(){
     $('.js-quiz-window').on('click', '.js-end-results button', function(e){
         STATE.question = 0;
         STATE.score = 0;
-        STATE.screen = 'questionare';
+        STATE.screen = 'landing';
         renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
     })
 }
