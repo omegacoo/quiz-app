@@ -60,15 +60,7 @@ const QUIZ = [
         answer: "John Stuart Mill",
         image: "images/mill.jpeg"
     }
-]
-
-function App(){
-    renderApp();
-    handleStart();
-    handleSubmit();
-    handleContinue();
-    handlePlayAgain();
-};
+];
 
 function buildCurrentScreen(quote, philosophers){
     if(STATE.screen === 'landing'){
@@ -80,8 +72,8 @@ function buildCurrentScreen(quote, philosophers){
     }else if(STATE.screen === 'questionare'){
         return `
         <section class="js-status-tracker">
-            <p class="js-question-number">Question: ${STATE.question + 1}/5</p>
-            <p class="js-score">Correct: ${STATE.score}/5</p>
+            <p class="js-question-number">Question: ${STATE.question + 1}/${QUIZ.length}</p>
+            <p class="js-score">Correct: ${STATE.score}/${QUIZ.length}</p>
         </section>
         <section class="js-questionare">
             <div class="js-quote-box">
@@ -102,8 +94,8 @@ function buildCurrentScreen(quote, philosophers){
     }else if(STATE.screen === 'answer'){
         return `
         <section class="js-status-tracker">
-            <p class="js-question-number">Question: ${STATE.question + 1}/5</p>
-            <p class="js-score">Correct: ${STATE.score}/5</p>
+            <p class="js-question-number">Question: ${STATE.question + 1}/${QUIZ.length}</p>
+            <p class="js-score">Correct: ${STATE.score}/${QUIZ.length}</p>
         </section>
         <section class="js-individual-results">
             <div class="js-philosopher-image-box">
@@ -118,22 +110,22 @@ function buildCurrentScreen(quote, philosophers){
         return `
         <section class="js-end-results">
             <h2>Congratulations!</h2>
-            <p>You got ${STATE.score}/5 correct!</p>
+            <p>You got ${STATE.score}/${QUIZ.length} correct!</p>
             <p>Great job!</p>
             <button>play again</button>
         </section>`
     }else{
         return `<p>error loading page...</p>`
-    }
-}
+    };
+};
 
 function handleStart(){
     $('.js-quiz-window').on('click', '.js-start', function(){
         STATE.screen = 'questionare';
 
         renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
-    })
-}
+    });
+};
 
 function handleSubmit(){
     $('.js-quiz-window').on('submit', '.js-quote-form', function(e){
@@ -147,9 +139,9 @@ function handleSubmit(){
         }else{
             STATE.screen = 'answer';
             renderApp();
-        }
-    })
-}
+        };
+    });
+};
 
 function handleContinue(){
     $('.js-quiz-window').on('click', '.js-continue', function(e){
@@ -161,9 +153,9 @@ function handleContinue(){
             STATE.question += 1;
             STATE.screen = 'results';
             renderApp();
-        }
-    })
-}
+        };
+    });
+};
 
 function handlePlayAgain(){
     $('.js-quiz-window').on('click', '.js-end-results button', function(e){
@@ -171,13 +163,21 @@ function handlePlayAgain(){
         STATE.score = 0;
         STATE.screen = 'landing';
         renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
-    })
-}
+    });
+};
 
 function renderApp(quote = '', philosophers = []){
     const currentScreen = buildCurrentScreen(quote, philosophers);
 
     $('.js-quiz-window').html(currentScreen);
-}
+};
+
+function App(){
+    renderApp();
+    handleStart();
+    handleSubmit();
+    handleContinue();
+    handlePlayAgain();
+};
 
 $(App);
