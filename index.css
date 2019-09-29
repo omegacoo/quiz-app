@@ -68,8 +68,6 @@ main {
     width: 70vw;
 
     padding: 7px;
-    
-    display: none;
 }
 
 .js-status-tracker p {
@@ -78,10 +76,6 @@ main {
 }
 
 /* Questionare */
-.js-questionare {
-    display: none;
-}
-
 .js-quote-box {
     display: block;
     margin-left: auto;
@@ -112,10 +106,6 @@ main {
 }
 
 /* Individual results page */
-.js-individual-results {
-    display: none;
-}
-
 .js-philosopher-image-box {
     display: block;
     margin-left: auto;
@@ -126,6 +116,11 @@ main {
 
     width: 55vw;
     height: 55vw;
+}
+
+.js-philosopher-image-box img {
+    width: 54vw;
+    height: 54vw;
 }
 
 .js-who-said-box {
@@ -150,8 +145,6 @@ main {
 .js-end-results {
     display: block;
     margin-top: 125px;
-    
-    display: none;
 }
 
 .js-end-results p {
