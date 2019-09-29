@@ -129,7 +129,7 @@ main {
     margin-right: auto;
     margin-top: 5vh;
 
-    width: 220px;
+    width: 240px;
 
     text-align: left;
 
@@ -137,7 +137,7 @@ main {
 }
 
 .js-quote-form label:hover {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 .js-quote-form button {
