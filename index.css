@@ -252,3 +252,56 @@ main {
 
     box-shadow: none;
 }
+
+/* Landscape */
+@media (orientation: landscape) {
+    .js-title h1 {
+        top: 1vh;
+    }
+
+    .js-quiz-window {
+        width: 600px;
+        height: 85vh;
+
+        margin-top: 1vh;
+    }
+
+    .js-landing {
+        margin-top: 15vh;
+    }
+
+    .js-status-tracker {
+        margin-top: 1vh;
+        width: 400px;
+    }
+
+    .correct {
+        top: -20px;
+    }
+
+    .js-quote-box {
+        width: 500px;
+
+        margin-top: 1vh;
+    }
+    
+    .js-philosopher-image-box {
+        margin-top: -5vh;
+        width: 100px;
+        height: 100px;
+    }
+
+    .js-philosopher-image-box img {
+        width: 98px;
+        height: 98px;
+    }
+
+    .js-who-said-box {
+        margin-left: -145px;
+        width: 400px;
+    }
+
+    .js-end-results {
+        margin-top: 15vh;
+    }
+}
