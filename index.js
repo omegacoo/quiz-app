@@ -83,10 +83,10 @@ function buildCurrentScreen(quote, philosophers){
                 </p>
             </div>
             <form class="js-quote-form" action="#">
-                <input type="radio" name="philosopher" value="${philosophers[0]}" required>   ${philosophers[0]}<br>
-                <input type="radio" name="philosopher" value="${philosophers[1]}" required>   ${philosophers[1]}<br>
-                <input type="radio" name="philosopher" value="${philosophers[2]}" required>   ${philosophers[2]}<br>
-                <input type="radio" name="philosopher" value="${philosophers[3]}" required>   ${philosophers[3]}<br>
+                <label><input type="radio" name="philosopher" value="${philosophers[0]}" required>   ${philosophers[0]}</label><br>
+                <label><input type="radio" name="philosopher" value="${philosophers[1]}" required>   ${philosophers[1]}</label><br>
+                <label><input type="radio" name="philosopher" value="${philosophers[2]}" required>   ${philosophers[2]}</label><br>
+                <label><input type="radio" name="philosopher" value="${philosophers[3]}" required>   ${philosophers[3]}</label><br>
 
                 <button type="submit">submit</button>
             </form>
@@ -127,7 +127,7 @@ function handleStart(){
     });
 };
 
-function handleSubmit(){
+function handleGuessSubmit(){
     $('.js-quiz-window').on('submit', '.js-quote-form', function(e){
         e.preventDefault();
         let guess = $('input[name="philosopher"]:checked')[0].attributes.value.value;
@@ -175,7 +175,7 @@ function renderApp(quote = '', philosophers = []){
 function App(){
     renderApp();
     handleStart();
-    handleSubmit();
+    handleGuessSubmit();
     handleContinue();
     handlePlayAgain();
 };
