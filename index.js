@@ -111,9 +111,9 @@ function buildCurrentScreen(quote, philosophers){
     }else if(STATE.screen === 'results'){
         return `
         <section class="js-end-results">
-            <h2>Congratulations!</h2>
-            <p>You got ${STATE.score}/${QUIZ.length} correct!</p>
-            <p>Great job!</p>
+            <h2>The End!</h2>
+            <p>You got ${STATE.score}/${QUIZ.length} correct!</p><br>
+            <p>${STATE.score >= 3 ? "Great Job!" : "Better luck next time!"}</p>
             <button>play again</button>
         </section>`
     }else{
