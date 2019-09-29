@@ -129,13 +129,15 @@ main {
     margin-right: auto;
     margin-top: 5vh;
 
-    width: 200px;
+    width: 220px;
 
     text-align: left;
+
+    font-size: 20px;
 }
 
 .js-quote-form label:hover {
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .js-quote-form button {
