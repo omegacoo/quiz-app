@@ -24,7 +24,41 @@ const QUIZ = [
             "Voltaire",
             "Immanuel Kant"
         ],
-        answer: "Renee Descartes"
+        answer: "Renee Descartes",
+        image: "images/descartes.jpeg"
+    },
+    {
+        quote: "The life of man is of no greater importance to the universe than that of an oyster.",
+        philosophers: [
+            "Plato",
+            "Aristotle",
+            "David Hume",
+            "Saint Augustine"
+        ],
+        answer: "David Hume",
+        image: "images/hume.jpeg"
+    },
+    {
+        quote: "The death of dogma is the birth of morality.",
+        philosophers: [
+            "Albert Einstein",
+            "Bertrand Russel",
+            "John Locke",
+            "Immanuel Kant"
+        ],
+        answer: "Immanuel Kant",
+        image: "images/kant.jpeg"
+    },
+    {
+        quote: "Bad men need nothing more to compass their ends, than that good men should look on and do nothing.",
+        philosophers: [
+            "Thomas Hobbes",
+            "Marcus Aurelius",
+            "Friedrich Nietzsche",
+            "John Stuart Mill"
+        ],
+        answer: "John Stuart Mill",
+        image: "images/mill.jpeg"
     }
 ]
 
@@ -32,6 +66,8 @@ function App(){
     renderApp();
     handleStart();
     handleSubmit();
+    handleContinue();
+    handlePlayAgain();
 };
 
 function buildCurrentScreen(quote, philosophers){
@@ -43,11 +79,11 @@ function buildCurrentScreen(quote, philosophers){
         </section>`
     }else if(STATE.screen === 'questionare'){
         return `
-        <section class="js-status-tracker hidden">
+        <section class="js-status-tracker">
             <p class="js-question-number">Question: ${STATE.question + 1}/5</p>
             <p class="js-score">Correct: ${STATE.score}/5</p>
         </section>
-        <section class="js-questionare hidden">
+        <section class="js-questionare">
             <div class="js-quote-box">
                 <h3 class="js-quote-title">Who said?</h3>
                 <p>
@@ -65,26 +101,26 @@ function buildCurrentScreen(quote, philosophers){
         </section>`
     }else if(STATE.screen === 'answer'){
         return `
-        <section class="js-status-tracker hidden">
+        <section class="js-status-tracker">
             <p class="js-question-number">Question: ${STATE.question + 1}/5</p>
             <p class="js-score">Correct: ${STATE.score}/5</p>
         </section>
-        <section class="js-individual-results hidden">
+        <section class="js-individual-results">
             <div class="js-philosopher-image-box">
                 <img src="${QUIZ[STATE.question].image}" alt="Picture of ${QUIZ[STATE.question].answer}"}
             </div>
             <div class="js-who-said-box">
-                <p>${QUIZ[STATE.question].answer} said "${QUIZ[STATE.question].quote}"</p>
+                <p><strong>${QUIZ[STATE.question].answer}</strong> said <i>"${QUIZ[STATE.question].quote}"</i></p>
             </div>
-            <button>continue</button>
+            <button class="js-continue">continue</button>
         </section>`
     }else if(STATE.screen === 'results'){
         return `
-        <section class="js-end-results hidden">
+        <section class="js-end-results">
             <h2>Congratulations!</h2>
-            <p>You got __/5 correct!</p>
+            <p>You got ${STATE.score}/5 correct!</p>
             <p>Great job!</p>
-            <a href="index.html">play again</a>
+            <button>play again</button>
         </section>`
     }else{
         return `<p>error loading page...</p>`
@@ -95,7 +131,7 @@ function handleStart(){
     $('.js-start').on('click', function(){
         STATE.screen = 'questionare';
 
-        renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers)
+        renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
     })
 }
 
@@ -112,6 +148,29 @@ function handleSubmit(){
             STATE.screen = 'answer';
             renderApp();
         }
+    })
+}
+
+function handleContinue(){
+    $('.js-quiz-window').on('click', '.js-continue', function(e){
+        if(STATE.question < QUIZ.length - 1){
+            STATE.question += 1;
+            STATE.screen = 'questionare';
+            renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
+        }else{
+            STATE.question += 1;
+            STATE.screen = 'results';
+            renderApp();
+        }
+    })
+}
+
+function handlePlayAgain(){
+    $('.js-quiz-window').on('click', '.js-end-results button', function(e){
+        STATE.question = 0;
+        STATE.score = 0;
+        STATE.screen = 'questionare';
+        renderApp(QUIZ[STATE.question].quote, QUIZ[STATE.question].philosophers);
     })
 }
 
