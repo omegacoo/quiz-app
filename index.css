@@ -2,18 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-family: 'Arial rounded mt bold';
+}
+
+body {
+    color: #339FFF;
+    background-color: #000036;
 }
 
 .js-quiz-window {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
-    width: 80vw;
-    height: 66vh;
+    margin-top: 14vh;
+    width: 300px;
+    height: 500px;
 
     border: 2px solid;
+    border-radius: 15px;
+
+    background-color: #339FFF;
+    color: #000036;
 }
 
 .js-title {
@@ -22,7 +31,7 @@
 
 .js-title h1 {
     position: relative;
-    top: 50px;
+    top: 7vh;
 }
 
 main {
@@ -38,7 +47,6 @@ main {
 .js-start {
     border-radius: 50%;
     border: 2px solid;
-    box-shadow: 5px 5px gray;
 
     display: block;
     margin-left: auto;
@@ -47,9 +55,21 @@ main {
     width: 150px;
     height: 150px;
 
-    background-color: white;
+    background-color: #81FEFE;
 
     overflow: hidden;
+}
+
+.js-start:hover {
+    box-shadow: 5px 5px rgb(22, 68, 107);
+    cursor: pointer;
+}
+
+.js-start:active {
+    position: relative;
+    left: 5px;
+    top: 5px;
+    box-shadow: none;
 }
 
 .js-start img {
@@ -65,9 +85,12 @@ main {
     margin-top: 10px;
 
     border: 1px solid;
-    width: 70vw;
+    border-radius: 15px;
+    width: 200px;
 
     padding: 7px;
+
+    background-color: #81FEFE;
 }
 
 .js-status-tracker p {
@@ -80,29 +103,38 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 7vh;
 
-    width: 60vw;
+    padding: 5px;
+
+    width: 250px;
 
     border: 1px solid;
+    border-radius: 15px;
+
+    background-color: #81FEFE;
 }
 
 .js-quote-form {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin-top: 5vh;
 
-    width: 60vw;
+    width: 200px;
 
     text-align: left;
+}
+
+.js-quote-form label:hover {
+    font-size: 18px;
 }
 
 .js-quote-form button {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 2vh;
 }
 
 /* Individual results page */
@@ -110,35 +142,45 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 30px;
+    margin-top: 2vh;
 
     border: 1px solid;
+    border-radius: 15px;
 
-    width: 55vw;
-    height: 55vw;
+    width: 200px;
+    height: 200px;
 }
 
 .js-philosopher-image-box img {
-    width: 54vw;
-    height: 54vw;
+    width: 198px;
+    height: 198px;
+    
+    border-radius: 15px;
+    position: relative;
+    /* left: -1px; */
 }
 
 .js-who-said-box {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5px;
+    margin-top: .5vh;
 
-    width: 54vw;
+    padding: 5px;
+
+    width: 200px;
 
     border: 1px solid;
+    border-radius: 15px;
+
+    background-color: #81FEFE;
 }
 
 .js-continue {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 1vh;
 }
 
 /* End results page */

@@ -1,7 +1,8 @@
 const STATE = {
     screen: "landing",
     question: 0,
-    score: 0
+    score: 0,
+    correct: false
 };
 
 const QUIZ = [
@@ -79,7 +80,7 @@ function buildCurrentScreen(quote, philosophers){
             <div class="js-quote-box">
                 <h3 class="js-quote-title">Who said?</h3>
                 <p>
-                    <i>${quote}</i>
+                    <i>"${quote}"</i>
                 </p>
             </div>
             <form class="js-quote-form" action="#">
@@ -96,7 +97,8 @@ function buildCurrentScreen(quote, philosophers){
         <section class="js-status-tracker">
             <p class="js-question-number">Question: ${STATE.question + 1}/${QUIZ.length}</p>
             <p class="js-score">Correct: ${STATE.score}/${QUIZ.length}</p>
-        </section>
+        </section><br>
+        <h2>${STATE.correct ? "Correct!": "Wrong!"}</h2>
         <section class="js-individual-results">
             <div class="js-philosopher-image-box">
                 <img src="${QUIZ[STATE.question].image}" alt="Picture of ${QUIZ[STATE.question].answer}"}
@@ -135,9 +137,11 @@ function handleGuessSubmit(){
         if(guess === QUIZ[STATE.question].answer){
             STATE.score += 1;
             STATE.screen = 'answer';
+            STATE.correct = true;
             renderApp();
         }else{
             STATE.screen = 'answer';
+            STATE.correct = false;
             renderApp();
         };
     });
