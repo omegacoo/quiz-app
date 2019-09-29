@@ -6,8 +6,8 @@
 }
 
 body {
-    color: #339FFF;
-    background-color: #000036;
+    color: black;
+    background-color: #55705A;
 }
 
 .js-quiz-window {
@@ -20,9 +20,12 @@ body {
 
     border: 2px solid;
     border-radius: 15px;
+    box-shadow: 5px 5px rgb(59, 77, 51);
 
-    background-color: #339FFF;
-    color: #000036;
+    background-color: #e48873;
+    color: #2b2119;
+
+    overflow: hidden;
 }
 
 .js-title {
@@ -55,13 +58,13 @@ main {
     width: 150px;
     height: 150px;
 
-    background-color: #81FEFE;
+    background-color: #ecdccb;
 
     overflow: hidden;
 }
 
 .js-start:hover {
-    box-shadow: 5px 5px rgb(22, 68, 107);
+    box-shadow: 5px 5px #95594b;
     cursor: pointer;
 }
 
@@ -90,12 +93,17 @@ main {
 
     padding: 7px;
 
-    background-color: #81FEFE;
+    background-color: #ecdccb;
 }
 
 .js-status-tracker p {
     display: inline;
     margin: 10px;
+}
+
+.correct {
+    position: relative;
+    top: -10px;
 }
 
 /* Questionare */
@@ -112,7 +120,7 @@ main {
     border: 1px solid;
     border-radius: 15px;
 
-    background-color: #81FEFE;
+    background-color: #ecdccb;
 }
 
 .js-quote-form {
@@ -142,7 +150,7 @@ main {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2vh;
+    margin-top: .5vh;
 
     border: 1px solid;
     border-radius: 15px;
@@ -157,7 +165,6 @@ main {
     
     border-radius: 15px;
     position: relative;
-    /* left: -1px; */
 }
 
 .js-who-said-box {
@@ -173,14 +180,14 @@ main {
     border: 1px solid;
     border-radius: 15px;
 
-    background-color: #81FEFE;
+    background-color: #ecdccb;
 }
 
 .js-continue {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1vh;
+    margin-top: .5vh;
 }
 
 /* End results page */
@@ -197,4 +204,49 @@ main {
 .js-end-results button {
     position: relative;
     top: 80px;
+    
+    border-radius: 15px;
+    background-color: green;
+    border: 1px solid rgb(1, 75, 1);
+
+    padding: 10px;
+
+    font-size: 20px;
+}
+
+.js-end-results button:hover {
+    box-shadow: 5px 5px #95594b;
+    cursor: pointer;
+}
+
+.js-end-results button:active {
+    position: relative;
+    top: 85px;
+    left: 5px;
+
+    box-shadow: none;
+}
+
+/* Buttons */
+.js-button {
+    border-radius: 15px;
+    background-color: green;
+    border: 1px solid rgb(1, 75, 1);
+
+    padding: 10px;
+
+    font-size: 20px;
+}
+
+.js-button:hover {
+    box-shadow: 5px 5px #95594b;
+    cursor: pointer;
+}
+
+.js-button:active {
+    position: relative;
+    top: 5px;
+    left: 5px;
+
+    box-shadow: none;
 }

@@ -89,7 +89,7 @@ function buildCurrentScreen(quote, philosophers){
                 <label><input type="radio" name="philosopher" value="${philosophers[2]}" required>   ${philosophers[2]}</label><br>
                 <label><input type="radio" name="philosopher" value="${philosophers[3]}" required>   ${philosophers[3]}</label><br>
 
-                <button type="submit">submit</button>
+                <button class="js-button" type="submit">submit</button>
             </form>
         </section>`
     }else if(STATE.screen === 'answer'){
@@ -98,7 +98,7 @@ function buildCurrentScreen(quote, philosophers){
             <p class="js-question-number">Question: ${STATE.question + 1}/${QUIZ.length}</p>
             <p class="js-score">Correct: ${STATE.score}/${QUIZ.length}</p>
         </section><br>
-        <h2>${STATE.correct ? "Correct!": "Wrong!"}</h2>
+        <h2 class="correct">${STATE.correct ? "Correct!": "Wrong!"}</h2>
         <section class="js-individual-results">
             <div class="js-philosopher-image-box">
                 <img src="${QUIZ[STATE.question].image}" alt="Picture of ${QUIZ[STATE.question].answer}"}
@@ -106,7 +106,7 @@ function buildCurrentScreen(quote, philosophers){
             <div class="js-who-said-box">
                 <p><strong>${QUIZ[STATE.question].answer}</strong> said <i>"${QUIZ[STATE.question].quote}"</i></p>
             </div>
-            <button class="js-continue">continue</button>
+            <button class="js-continue js-button">continue</button>
         </section>`
     }else if(STATE.screen === 'results'){
         return `
