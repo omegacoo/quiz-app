@@ -138,6 +138,11 @@ main {
 
 .js-quote-form label:hover {
     font-size: 22px;
+    cursor: pointer;
+}
+
+.js-quote-form input:hover {
+    cursor: pointer;
 }
 
 .js-quote-form button {
