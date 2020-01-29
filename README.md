@@ -1,6 +1,6 @@
 # Quiz-App
 
-This is an easily scalable quiz focusing on the quotes of famous philosophers. Made it in such a way that adding new quotes is simple, straightforward, and all in one location. 
+This is an easily scalable quiz focusing on the quotes of famous philosophers. Made in such a way that adding new quotes is simple, straightforward, and all in one location. 
 
 ## Motivation
 
